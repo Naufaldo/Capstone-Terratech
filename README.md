@@ -1,2 +1,2 @@
 # Capstone-Terratech
-INI Repo buat Machine Learning
+INI Repo buat Cloud Computing
