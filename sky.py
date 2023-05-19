@@ -4,8 +4,6 @@ import os
 from google.cloud import storage
 from time import sleep
 
-# Set the path to your JSON credentials file
-credentials_path = 'json/credentials.json'
 
 # Set the Google Cloud project ID
 project_id = 'capstone-terrratech'
@@ -14,7 +12,7 @@ project_id = 'capstone-terrratech'
 bucket_name = 'gs://sky-photo/'
 
 # Authenticate with Google Cloud using the JSON credentials file
-subprocess.run(['gcloud', 'auth', 'activate-service-account', '--key-file', credentials_path])
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'json/credentials.json'
 
 # Set the Google Cloud project ID
 subprocess.run(['gcloud', 'config', 'set', 'project', project_id])
