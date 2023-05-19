@@ -79,6 +79,7 @@ def publish_sensor_data(humidity, temperature, moisture):
 
 # Function to receive commands from the mobile device and control the relay
 def receive_commands(message):
+    print('Received command:', message.data)
     command = message.data.decode('utf-8')
     if command == 'on':
         control_relay(True)
