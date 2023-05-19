@@ -17,8 +17,10 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/pi/Capstone/json/credentia
 
 # GPIO setup function
 def setup_gpio():
+    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(relay_pin, GPIO.OUT)
+    
 
 # Initialize Google Cloud Pub/Sub client
 publisher = pubsub_v1.PublisherClient()
