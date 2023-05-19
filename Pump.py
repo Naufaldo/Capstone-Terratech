@@ -1,5 +1,6 @@
 from google.cloud import pubsub_v1
 import RPi.GPIO as GPIO
+import time
 import os
 
 # Configuration variables
