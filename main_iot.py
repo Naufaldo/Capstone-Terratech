@@ -8,7 +8,7 @@ import RPi.GPIO as GPIO
 # Configuration variables
 project_id = 'capstone-terrratech'
 subscription_name = 'Sensor-sub'
-collection_name = 'sensor_data
+collection_name = 'sensor_data'
 relay_pin = 2  # GPIO pin connected to the relay
 
 # GPIO setup function
@@ -53,7 +53,7 @@ def control_relay(on):
 
 # Function to publish sensor data to GCP Pub/Sub
 def publish_sensor_data(humidity, temperature, moisture):
-    topic_path = publisher.topic_path(project_id, 'sensor_data')
+    topic_path = publisher.topic_path(project_id, 'Sensor')
 
     payload = {
         'humidity': humidity,
