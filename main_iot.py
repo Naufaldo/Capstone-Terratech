@@ -82,8 +82,10 @@ def receive_commands(message):
     command = message.data.decode('utf-8')
     if command == 'on':
         control_relay(True)
+        print('Relay turned on.')
     elif command == 'off':
         control_relay(False)
+        print('Relay turned off.')
 
 # Main function
 def main():
