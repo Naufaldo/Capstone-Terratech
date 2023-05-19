@@ -25,9 +25,11 @@ def control_relay(on):
     # Control the relay based on the value of 'on'
     # Adjust the code based on the specific relay module and pin configuration you're using
     if on:
-        GPIO.output(relay_pin, GPIO.HIGH)  # Turn on the relay
+        GPIO.output(relay_pin, GPIO.LOW)  # Turn on the relay
+        print('relay on')
     else:
-        GPIO.output(relay_pin, GPIO.LOW)   # Turn off the relay
+        GPIO.output(relay_pin, GPIO.HIGH)   # Turn off the relay
+        print('relay off')
 
 # Function to receive commands from the mobile device and control the relay
 def receive_commands(message):

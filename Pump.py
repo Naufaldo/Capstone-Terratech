@@ -11,10 +11,10 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'json/credentials.json'
 # Create a callback function to process incoming messages
 def callback(message):
     if message.data == b'activate':
-        GPIO.output(relay_pin, GPIO.HIGH)  # Activate the relay
+        GPIO.output(relay_pin, GPIO.LOW)  # Activate the relay
         print('Relay activated')
     elif message.data == b'deactivate':
-        GPIO.output(relay_pin, GPIO.LOW)  # Deactivate the relay
+        GPIO.output(relay_pin, GPIO.HIGH)  # Deactivate the relay
         print('Relay deactivated')
     message.ack()
 
