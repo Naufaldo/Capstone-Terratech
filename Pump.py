@@ -12,8 +12,10 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'json/credentials.json'
 def callback(message):
     if message.data == b'activate':
         GPIO.output(relay_pin, GPIO.HIGH)  # Activate the relay
+        print('Relay activated')
     elif message.data == b'deactivate':
         GPIO.output(relay_pin, GPIO.LOW)  # Deactivate the relay
+        print('Relay deactivated')
     message.ack()
 
 # Create a subscriber client
