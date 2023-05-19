@@ -1,6 +1,6 @@
 import subprocess
 from datetime import datetime
-
+import os
 # Authenticate with Google Cloud
 
 # Set the Google Cloud project ID
@@ -17,3 +17,5 @@ subprocess.run(['fswebcam', '-r', '1280x720', '--no-banner', image_file_name])
 
 # Upload the image to Google Cloud Storage using gsutil
 subprocess.run(['gsutil', 'cp', image_file_name, 'gs://sky-photo/'])
+
+os.remove(image_file_name)
