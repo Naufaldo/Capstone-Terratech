@@ -4,12 +4,16 @@ from google.cloud import firestore
 import json
 import time
 import RPi.GPIO as GPIO
+import os
 
 # Configuration variables
 project_id = 'capstone-terrratech'
 subscription_name = 'Sensor-sub'
 collection_name = 'sensor_data'
 relay_pin = 2  # GPIO pin connected to the relay
+
+# Set environment variable for service account credentials
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/pi/Capstone/json/credentials.json'
 
 # GPIO setup function
 def setup_gpio():
