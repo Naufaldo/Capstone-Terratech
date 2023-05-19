@@ -9,7 +9,7 @@ from time import sleep
 project_id = 'capstone-terrratech'
 
 # Set the bucket name
-bucket_name = 'gs://sky-photo/'
+bucket_name = 'sky-photo'
 
 # Authenticate with Google Cloud using the JSON credentials file
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'json/credentials.json'
