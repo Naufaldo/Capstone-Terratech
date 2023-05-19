@@ -1,18 +1,14 @@
 import Adafruit_DHT
 from google.cloud import pubsub_v1
+from google.cloud import firestore
 import json
 import time
 import RPi.GPIO as GPIO
 
 # Configuration variables
 project_id = 'capstone-terrratech'
-registry_id = 'YOUR_REGISTRY_ID'
-device_id = 'YOUR_DEVICE_ID'
-private_key_file = 'path/to/private_key.pem'
-algorithm = 'ES256'
-root_cert_file = 'path/to/roots.pem'
-mqtt_bridge_hostname = 'mqtt.googleapis.com'
-mqtt_bridge_port = 8883
+subscription_name = 'Sensor-sub'
+collection_name = 'sensor_data
 relay_pin = 2  # GPIO pin connected to the relay
 
 # GPIO setup function
@@ -21,7 +17,11 @@ def setup_gpio():
     GPIO.setup(relay_pin, GPIO.OUT)
 
 # Initialize Google Cloud Pub/Sub client
-client = pubsub_v1.PublisherClient()
+publisher = pubsub_v1.PublisherClient()
+subscriber = pubsub_v1.SubscriberClient()
+
+# Initialize Firestore client
+db = firestore.Client()
 
 # Function to read sensor data from DHT22
 def read_sensor_data():
@@ -53,7 +53,7 @@ def control_relay(on):
 
 # Function to publish sensor data to GCP Pub/Sub
 def publish_sensor_data(humidity, temperature, moisture):
-    topic_path = client.topic_path(project_id, 'YOUR_TOPIC_NAME')
+    topic_path = publisher.topic_path(project_id, 'sensor_data')
 
     payload = {
         'humidity': humidity,
@@ -61,8 +61,13 @@ def publish_sensor_data(humidity, temperature, moisture):
         'moisture': moisture
     }
 
-    client.publish(topic_path, json.dumps(payload).encode('utf-8'))
+    publisher.publish(topic_path, json.dumps(payload).encode('utf-8'))
     print('Data published to GCP Pub/Sub.')
+
+    # Store data in Firestore
+    doc_ref = db.collection(collection_name).document()
+    doc_ref.set(payload)
+    print('Data stored in Firestore.')
 
 # Function to receive commands from the mobile device and control the relay
 def receive_commands(message):
@@ -76,7 +81,8 @@ def receive_commands(message):
 def main():
     setup_gpio()
 
-    client.subscribe('YOUR_SUBSCRIPTION_NAME', receive_commands)
+    subscription_path = subscriber.subscription_path(project_id, subscription_name)
+    subscriber.subscribe(subscription_path, callback=receive_commands)
 
     while True:
         humidity, temperature = read_sensor_data()

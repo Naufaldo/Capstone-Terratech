@@ -2,7 +2,6 @@ import subprocess
 from datetime import datetime
 
 # Authenticate with Google Cloud
-subprocess.run(['gcloud', 'auth', 'login'])
 
 # Set the Google Cloud project ID
 subprocess.run(['gcloud', 'config', 'set', 'project', 'capstone-terrratech'])
