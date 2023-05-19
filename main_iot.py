@@ -9,7 +9,7 @@ import datetime
 
 # Configuration variables
 project_id = 'capstone-terrratech'
-subscription_name = 'Sensor-sub'
+subscription_name = 'Relay-sub'
 collection_name = 'sensor_data'
 relay_pin = 2  # GPIO pin connected to the relay
 
