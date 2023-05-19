@@ -2,7 +2,7 @@ from google.cloud import pubsub_v1
 import RPi.GPIO as GPIO
 import os
 # Configure the GPIO pin connected to the relay
-relay_pin = 2
+relay_pin = 26
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(relay_pin, GPIO.OUT)
