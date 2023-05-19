@@ -5,6 +5,7 @@ import json
 import time
 import RPi.GPIO as GPIO
 import os
+import datetime
 
 # Configuration variables
 project_id = 'capstone-terrratech'
@@ -71,9 +72,10 @@ def publish_sensor_data(humidity, temperature, moisture):
     print('Data published to GCP Pub/Sub.')
 
     # Store data in Firestore
-    doc_ref = db.collection(collection_name).document()
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    doc_ref = db.collection(collection_name).document(timestamp)
     doc_ref.set(payload)
-    print('Data stored in Firestore.')
+    print('Data stored in Firestore with document ID:', timestamp)
 
 # Function to receive commands from the mobile device and control the relay
 def receive_commands(message):
@@ -85,16 +87,18 @@ def receive_commands(message):
 
 # Main function
 def main():
-    setup_gpio()
+     while True:
+        setup_gpio()
 
-    subscription_path = subscriber.subscription_path(project_id, subscription_name)
-    subscriber.subscribe(subscription_path, callback=receive_commands)
-
-    while True:
         humidity, temperature = read_sensor_data()
         moisture = read_soil_moisture()
         publish_sensor_data(humidity, temperature, moisture)
-        time.sleep(60)
+
+        # Subscribe to the relay control commands
+        subscription_path = subscriber.subscription_path(project_id, subscription_name)
+        subscriber.subscribe(subscription_path, callback=receive_commands)
+
+        time.sleep(30)
 
 if __name__ == '__main__':
     main()
