@@ -1,2 +1,8 @@
 # Capstone-Terratech
-INI Repo buat Cloud Computing
+Ini Repo buat Cloud Computing
+
+Cloud Architecture :
+```
+![alt text](img/Simple_cloud Architecture.png)
+
+```
