@@ -3,6 +3,6 @@ Ini Repo buat Cloud Computing
 
 Cloud Architecture :
 
-![alt text](image/Terratech.png)
+![architecture](img/architecture.png)
 
 
