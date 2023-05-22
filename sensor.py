@@ -19,16 +19,18 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'json/credentials.json'
 publisher = pubsub_v1.PublisherClient()
 db = firestore.Client()
 
-# GPIO pin for moisture sensor
-moisture_pin = 14
+# GPIO pins
+sensor_pin = 17  # GPIO pin connected to the DHT22 sensor
+moisture_pin = 14  # GPIO pin for moisture sensor
+rain_pin = 19  # GPIO pin for rain sensor
 
 # Function to read sensor data from DHT22
 def read_sensor_data():
     sensor = Adafruit_DHT.DHT22
-    pin = 17  # GPIO pin connected to the DHT22 sensor
-    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, sensor_pin)
     moisture = read_soil_moisture()
-    return humidity, temperature, moisture
+    rain = read_rain_sensor()
+    return humidity, temperature, moisture, rain
 
 # Function to read soil moisture
 def read_soil_moisture():
@@ -39,14 +41,24 @@ def read_soil_moisture():
     else:
         return "tanah kering"
 
+# Function to read rain sensor
+def read_rain_sensor():
+    GPIO.setup(rain_pin, GPIO.IN)
+    rain_status = GPIO.input(rain_pin)
+    if rain_status:
+        return "rain detected"
+    else:
+        return "no rain"
+
 # Function to publish sensor data to GCP Pub/Sub
-def publish_sensor_data(humidity, temperature, moisture):
+def publish_sensor_data(humidity, temperature, moisture, rain):
     topic_path = publisher.topic_path(project_id, topic_name)
 
     payload = {
         'humidity': humidity,
         'temperature': temperature,
-        'moisture': moisture
+        'moisture': moisture,
+        'rain': rain
     }
 
     publisher.publish(topic_path, json.dumps(payload).encode('utf-8'))
@@ -65,8 +77,8 @@ def main():
     GPIO.setmode(GPIO.BCM)
 
     while True:
-        humidity, temperature, moisture = read_sensor_data()
-        publish_sensor_data(humidity, temperature, moisture)
+        humidity, temperature, moisture, rain = read_sensor_data()
+        publish_sensor_data(humidity, temperature, moisture, rain)
 
         time.sleep(60)
 
