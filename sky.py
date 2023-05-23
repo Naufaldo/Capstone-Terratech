@@ -26,7 +26,7 @@ while True:
     image_file_name = f'{current_datetime}.jpg'
 
     # Capture an image using fswebcam
-    subprocess.run(['fswebcam', '-r', '1280x720', '--no-banner', image_file_name])
+    subprocess.run(['fswebcam','--fps' ,'15','-S','8', '-r', '1280x720','--no-banner', image_file_name])
 
     # Create a client for Google Cloud Storage
     client = storage.Client(project=project_id)
