@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green"
+    app:circularflow_defaultRadius="100dp"
+    app:circularflow_radiusInDP="100"
+    app:layout_constraintCircleRadius="20dp"
+    tools:circularflow_defaultRadius="20dp"
+    tools:circularflow_radiusInDP="20dp"
+    tools:context=".PurchaseToolsActivity"
+    tools:layout_constraintCircleRadius="200dp">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="321dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_product" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Bundling Price"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gold_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/gold_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="IoT Box Full"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/gold_title"
+                    app:layout_constraintStart_toStartOf="@+id/gold_title"
+                    app:layout_constraintTop_toBottomOf="@+id/gold_title" />
+
+                <TextView
+                    android:id="@+id/gold_title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Gold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/gold_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Rp, 50,000,000"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/gold_desc"
+                    app:layout_constraintStart_toStartOf="@+id/gold_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/gold_desc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/gold_image"
+                android:layout_width="84dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/gold_bundling" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/platinum_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/platinum_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Solar panel, IoT Box Full, Pompa"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/platinum_title"
+                    app:layout_constraintStart_toStartOf="@+id/platinum_title"
+                    app:layout_constraintTop_toBottomOf="@+id/platinum_title" />
+
+                <TextView
+                    android:id="@+id/platinum_title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Platinum"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/platinum_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Rp, 60,000,000"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/platinum_desc"
+                    app:layout_constraintStart_toStartOf="@+id/platinum_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/platinum_desc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/platinum_image"
+                android:layout_width="84dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/platinum_bundling" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/diamond_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Solar panel, IoT Box Full, Pompa, inventory"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/diamon_title"
+                    app:layout_constraintStart_toStartOf="@+id/diamon_title"
+                    app:layout_constraintTop_toBottomOf="@+id/diamon_title" />
+
+                <TextView
+                    android:id="@+id/diamon_title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Diamond"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/diamon_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Rp, 90,000,000"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/diamond_desc"
+                    app:layout_constraintStart_toStartOf="@+id/diamond_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/diamond_desc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="84dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/diamon_bundling" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:text="Continue"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

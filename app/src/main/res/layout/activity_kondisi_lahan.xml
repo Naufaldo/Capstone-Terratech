@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mild_gray"
+    tools:context=".KondisiLahanActivity">
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Tanah"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kelembaban_tanah_icon" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Kelembaban Tanah"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Kering"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Udara"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardView5"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/kelembaban_tanah_icon" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Kelembaban Tanah"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Kering"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView5"
+            app:layout_constraintTop_toTopOf="@+id/cardView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/kelembaban_tanah_icon" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Kelembaban Tanah"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Kering"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

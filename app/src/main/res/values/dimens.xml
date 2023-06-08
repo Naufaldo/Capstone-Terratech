@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="borderWidth">2dp</dimen>
+    <dimen name="borderRadius">8dp</dimen>
+    <!-- Add other dimension resources if needed -->
+</resources>
