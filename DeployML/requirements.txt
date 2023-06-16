@@ -1,0 +1,4 @@
+tensorflow-gpu==2.5.0
+keras==2.4.3
+firebase-admin==5.0.1
+google-cloud-storage==1.42.0
