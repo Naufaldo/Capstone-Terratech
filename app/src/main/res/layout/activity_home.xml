@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/userPicture"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
 
     <TextView
         android:id="@+id/textView6"
@@ -24,7 +25,7 @@
         android:layout_marginTop="18dp"
         android:text="Hi, User!"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/userPicture"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -47,7 +48,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/userPicture" />
 
     <TextView
         android:id="@+id/textView16"
@@ -62,33 +63,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="163dp"
-        android:layout_height="116dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
-        tools:src="@drawable/pembelian_alat_button" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
+    <ImageView
+        android:id="@+id/shopButton"
         android:layout_width="163dp"
         android:layout_height="116dp"
         android:layout_marginTop="20dp"
         android:background="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        tools:src="@drawable/kendali_pompa_button" />
+        android:src="@drawable/pembelian_alat_button"
+        app:layout_constraintEnd_toEndOf="@+id/catatanPompaButton"
+        app:layout_constraintStart_toStartOf="@+id/catatanPompaButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
+    <ImageView
+        android:id="@+id/kendaliPompaButton"
+        android:layout_width="163dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/userPicture"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userPicture"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:src="@drawable/kendali_pompa_button" />
+
+    <ImageView
+        android:id="@+id/kondisiLahanButton"
         android:layout_width="163dp"
         android:layout_height="116dp"
         android:layout_marginStart="24dp"
@@ -97,18 +98,19 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        tools:src="@drawable/kondisi_lahan_button" />
+        android:src="@drawable/kondisi_lahan_button" />
 
-    <ImageButton
-        android:id="@+id/imageButton4"
+    <ImageView
+        android:id="@+id/catatanPompaButton"
         android:layout_width="163dp"
         android:layout_height="116dp"
         android:background="#00FFFFFF"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/kondisiLahanButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
-        tools:src="@drawable/catatan_pompa_button" />
+        app:layout_constraintStart_toEndOf="@+id/kondisiLahanButton"
+        app:layout_constraintTop_toTopOf="@+id/kondisiLahanButton"
+        android:src="@drawable/catatan_pompa_button" />
 
     <TextView
         android:id="@+id/textView12"
@@ -119,9 +121,9 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintEnd_toEndOf="@+id/kondisiLahanButton"
+        app:layout_constraintStart_toStartOf="@+id/kondisiLahanButton"
+        app:layout_constraintTop_toBottomOf="@+id/kondisiLahanButton" />
 
     <TextView
         android:id="@+id/textView14"
@@ -132,9 +134,9 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/kendaliPompaButton"
+        app:layout_constraintStart_toStartOf="@+id/kendaliPompaButton"
+        app:layout_constraintTop_toBottomOf="@+id/kendaliPompaButton" />
 
     <TextView
         android:id="@+id/textView15"
@@ -145,9 +147,9 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintEnd_toEndOf="@+id/shopButton"
+        app:layout_constraintStart_toStartOf="@+id/shopButton"
+        app:layout_constraintTop_toBottomOf="@+id/shopButton" />
 
     <TextView
         android:id="@+id/textView13"
@@ -158,12 +160,12 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintEnd_toEndOf="@+id/catatanPompaButton"
+        app:layout_constraintStart_toStartOf="@+id/catatanPompaButton"
+        app:layout_constraintTop_toBottomOf="@+id/catatanPompaButton" />
 
-    <ImageButton
-        android:id="@+id/imageButton5"
+    <ImageView
+        android:id="@+id/pompaButton"
         android:layout_width="344dp"
         android:layout_height="189dp"
         android:layout_marginTop="24dp"
@@ -172,6 +174,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:src="@drawable/status_pompa_button_on" />
+        android:src="@drawable/status_pompa_button_on" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

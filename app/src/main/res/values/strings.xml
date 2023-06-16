@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Terratech</string>
-    <string name="pusat_kendali"><![CDATA[<u>Pusat Kendali</u>]]></string>
+    <string name="pusat_kendali"><![CDATA[Pusat Kendali]]></string>
 </resources>

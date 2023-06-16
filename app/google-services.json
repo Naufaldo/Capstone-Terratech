@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "377195184528",
+    "firebase_url": "https://capstone-terrratech-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "capstone-terrratech",
+    "storage_bucket": "capstone-terrratech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377195184528:android:8bba634e220f45c6f3b315",
+        "android_client_info": {
+          "package_name": "com.Terratech.Apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377195184528-s3bgrpq86vbd1gjcqvfclliv9jumr8hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAncF05B4wFZvY8t1C8H-Jz9zrCf1xVth0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377195184528-s3bgrpq86vbd1gjcqvfclliv9jumr8hk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

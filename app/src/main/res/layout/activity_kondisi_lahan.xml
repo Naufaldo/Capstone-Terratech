@@ -8,7 +8,7 @@
     tools:context=".KondisiLahanActivity">
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/tanah_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -21,12 +21,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
+        android:id="@+id/tanahCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textView25"
-        app:layout_constraintTop_toBottomOf="@+id/textView25">
+        app:layout_constraintStart_toStartOf="@+id/tanah_title"
+        app:layout_constraintTop_toBottomOf="@+id/tanah_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="150dp"
@@ -34,7 +34,7 @@
             android:padding="10dp">
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/tanahImage"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="15dp"
@@ -43,7 +43,7 @@
                 app:srcCompat="@drawable/kelembaban_tanah_icon" />
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/tanahTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -51,12 +51,13 @@
                 android:text="Kelembaban Tanah"
                 android:textColor="@color/gray"
                 android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                app:layout_constraintTop_toBottomOf="@+id/tanahImage" />
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/tanahKondisi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -64,8 +65,8 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintBottom_toBottomOf="@+id/tanahImage"
+                app:layout_constraintStart_toEndOf="@+id/tanahImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -73,7 +74,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/udaraSection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -81,18 +82,19 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/cardView5"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+        app:layout_constraintStart_toStartOf="@+id/tanahCard"
+        app:layout_constraintTop_toBottomOf="@+id/tanahCard" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/textView29">
+        app:layout_constraintStart_toStartOf="@+id/udaraSection"
+        app:layout_constraintTop_toBottomOf="@+id/udaraSection">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
+            android:id="@+id/kelembapanCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -101,42 +103,43 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+                android:layout_height="110dp"
+                android:padding="12dp">
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/kelembapanImage"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/kelembaban_tanah_icon" />
+                    app:srcCompat="@drawable/kelembaban_udara_icon" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/kelembapanTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="Kelembaban Tanah"
+                    android:text="Kelembaban Udara"
                     android:textColor="@color/gray"
                     android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/kelembapanImage" />
 
                 <TextView
-                    android:id="@+id/textView28"
+                    android:id="@+id/kelembapanKondisi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:text="Kering"
+                    android:text="Lembab"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintBottom_toBottomOf="@+id/kelembapanImage"
+                    app:layout_constraintStart_toEndOf="@+id/kelembapanImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -144,57 +147,188 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
+            android:id="@+id/temperaturCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cardView5"
-            app:layout_constraintTop_toTopOf="@+id/cardView5">
+            app:layout_constraintStart_toEndOf="@+id/kelembapanCard"
+            app:layout_constraintTop_toTopOf="@+id/kelembapanCard">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+                android:layout_height="110dp"
+                android:padding="12dp">
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/temperaturImage"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/kelembaban_tanah_icon" />
+                    app:srcCompat="@drawable/temperatur_icon" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/temperaturTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="Kelembaban Tanah"
+                    android:text="Temperatur"
                     android:textColor="@color/gray"
                     android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/temperaturImage" />
 
                 <TextView
-                    android:id="@+id/textView28"
+                    android:id="@+id/temperaturKondisi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:text="Kering"
+                    android:text="28℃"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintBottom_toBottomOf="@+id/temperaturImage"
+                    app:layout_constraintStart_toEndOf="@+id/temperaturImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/otherSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Lain-Lain"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/otherSection"
+        app:layout_constraintTop_toBottomOf="@+id/otherSection">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/langitCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/langitImage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/langit_icon" />
+
+                <TextView
+                    android:id="@+id/langitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Langit"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                <TextView
+                    android:id="@+id/langitKondisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Cerah"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/langitImage"
+                    app:layout_constraintStart_toEndOf="@+id/langitImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/batteryCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/langitCard"
+            app:layout_constraintTop_toTopOf="@+id/langitCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/batteryImage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/battery_black_icon" />
+
+                <TextView
+                    android:id="@+id/batteryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Baterai"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/batteryImage" />
+
+                <TextView
+                    android:id="@+id/batteryKondisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="65%"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/batteryImage"
+                    app:layout_constraintStart_toEndOf="@+id/batteryImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

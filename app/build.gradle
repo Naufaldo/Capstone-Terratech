@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -41,4 +45,30 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // VIEWPAGER DOT INDICATOR
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    // RETROFIT
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // VIEWMODEL
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    // DATASTORE
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // VIEWMODEL LIVEDATA
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
+    // LOGGING
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6"
+
+    // SWIPE TO REFRESH
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+
+    // ONBOARDING
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
 }

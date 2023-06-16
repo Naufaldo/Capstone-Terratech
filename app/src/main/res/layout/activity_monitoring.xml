@@ -73,7 +73,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/kelembapanUdaraIcon"
                 android:layout_width="59dp"
                 android:layout_height="44dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,17 +81,17 @@
                 app:srcCompat="@drawable/kelembapan_udara_icon" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/kelembabanTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kelembaban Udara "
+                android:text="Kelembaban Udara"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/textView22"
-                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                app:layout_constraintStart_toStartOf="@+id/kelembapanValue"
+                app:layout_constraintTop_toBottomOf="@+id/kelembapanValue" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/kelembapanValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -99,8 +99,8 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                app:layout_constraintStart_toEndOf="@+id/kelembapanUdaraIcon"
+                app:layout_constraintTop_toTopOf="@+id/kelembapanUdaraIcon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -111,7 +111,7 @@
             app:layout_constraintTop_toTopOf="@+id/constraintLayout">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/kelembapanTanahIcon"
                 android:layout_width="59dp"
                 android:layout_height="48dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -119,17 +119,17 @@
                 app:srcCompat="@drawable/kelembapan_tanah_icon" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/kelembapanTanahTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kelembaban Tanah"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/textView22"
-                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                app:layout_constraintStart_toStartOf="@+id/kelembapanTanahValue"
+                app:layout_constraintTop_toBottomOf="@+id/kelembapanTanahValue" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/kelembapanTanahValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -137,8 +137,8 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                app:layout_constraintStart_toEndOf="@+id/kelembapanTanahIcon"
+                app:layout_constraintTop_toTopOf="@+id/kelembapanTanahIcon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -159,7 +159,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/teganganBatteryIcon"
                 android:layout_width="59dp"
                 android:layout_height="48dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,17 +167,17 @@
                 app:srcCompat="@drawable/tegangan_baterai_icon" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/teganganBatteryTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tegangan Baterai"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/textView22"
-                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                app:layout_constraintStart_toStartOf="@+id/teganganBatteryValue"
+                app:layout_constraintTop_toBottomOf="@+id/teganganBatteryValue" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/teganganBatteryValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -185,13 +185,13 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                app:layout_constraintStart_toEndOf="@+id/teganganBatteryIcon"
+                app:layout_constraintTop_toTopOf="@+id/teganganBatteryIcon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
+        android:id="@+id/monitoringTanahCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
